@@ -55,7 +55,7 @@ function isPerfect(num) {
 // Get fun fact from Numbers API
 async function getFunFact(num) {
   try {
-    const response = await axios.get(`http://numbersapi.com/${num}?json`);
+    const response = await axios.get(`http://numbersapi.com/${num}/math?json`);
     return response.data.text;
   } catch (error) {
     return `Could not fetch fun fact for number ${num}`;
