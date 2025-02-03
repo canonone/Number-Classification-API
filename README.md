@@ -28,14 +28,10 @@ To set up the project locally:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/canonone/HNG_12.git
+   git clone https://github.com/canonone/Number-Classification-API.git
    ```
 
 2. Navigate to the project directory:
-
-   ```bash
-    cd stage_1
-   ```
 
 3. Install dependencies:
 
