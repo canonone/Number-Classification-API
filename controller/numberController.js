@@ -12,13 +12,13 @@ async function classifyNumber(req, res) {
 
   // check if the input is an alphabet
   if (/^[a-zA-Z]+$/.test(number)) {
-    return res.status(400).json({ error: true, number: number });
+    return res.status(400).json({ number: number, error: true });
   }
 
   // handle non-numeric inputs and convert to absolute value
   number = parseInt(number);
   if (isNaN(number)) {
-    return res.status(400).json({ error: true, message: "Invalid number" });
+    return res.status(400).json({ number: number, error: true });
   }
 
   // handle negative numbers by converting to absolute value
