@@ -12,6 +12,13 @@ app.get("/", (req, res) => {
   res.redirect("/api/classify-number");
 });
 app.get("/api/classify-number", async (req, res) => {
+  // Check if the `number` query parameter is missing
+  if (!req.query.number) {
+    return res.status(400).json({
+      number: null,
+      error: true,
+    });
+  }
   const number = req.query.number * 1;
 
   if (isNaN(number)) {
