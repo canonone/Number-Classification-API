@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.redirect("/api/classify-number");
+});
 app.get("/api/classify-number", async (req, res) => {
   const number = req.query.number * 1;
 
