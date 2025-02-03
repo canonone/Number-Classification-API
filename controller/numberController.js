@@ -31,8 +31,10 @@ async function classifyNumber(req, res) {
     properties: [],
     digit_sum: number
       .toString()
+      .replace("-", "")
       .split("")
-      .reduce((sum, digit) => sum + parseInt(digit), 0),
+      .map(Number)
+      .reduce((sum, digit) => sum + digit, 0),
     fun_fact: await getFunFact(number),
   };
 
