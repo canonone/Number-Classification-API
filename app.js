@@ -11,9 +11,6 @@ app.use((req, res, next) => {
 });
 
 // API endpoint to classify a number
-app.get("/", (req, res) => {
-  res.redirect("/api/classify-number");
-});
 app.get("/api/classify-number", classifyNumber);
 
 // Start the server
