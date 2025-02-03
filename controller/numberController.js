@@ -21,9 +21,6 @@ async function classifyNumber(req, res) {
     return res.status(400).json({ number: number, error: true });
   }
 
-  // handle negative numbers by converting to absolute value
-  number = Math.abs(number);
-
   const result = {
     number: number,
     is_prime: isPrime(number),
