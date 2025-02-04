@@ -38,8 +38,6 @@ const getDigitSum = (num) => {
 
 const classifyNumber = (num) => {
   const properties = [];
-  if (isPrime(num)) properties.push("prime");
-  if (isPerfect(num)) properties.push("perfect");
   if (isArmstrong(num)) properties.push("armstrong");
   if (num % 2 !== 0) properties.push("odd");
   if (num % 2 === 0) properties.push("even");
