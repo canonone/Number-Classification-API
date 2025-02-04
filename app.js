@@ -21,7 +21,7 @@ app.get("/api/classify-number", async (req, res) => {
   }
   const number = req.query.number * 1;
 
-  if (isNaN(number)) {
+  if (isNaN(number) || !Number.isInteger(number)) {
     return res.status(400).json({
       number: req.query.number,
       error: true,
